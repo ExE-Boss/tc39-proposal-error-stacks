@@ -32,6 +32,6 @@
 		"in-publish": "^2.0.1"
 	},
 	"devDependencies": {
-		"ecmarkup": "^6.1.0"
+		"ecmarkup": "^9.1.0"
 	}
 }

@@ -14,6 +14,7 @@ body {
   flex-basis: 66%;
   box-sizing: border-box;
   overflow: hidden;
+  padding-bottom: 1em;
 }
 
 body.oldtoc {
@@ -66,8 +67,40 @@ var {
   cursor: pointer;
 }
 
-var.referenced {
+var.referenced0 {
+  color: inherit;
   background-color: #ffff33;
+  box-shadow: 0 0 0 2px #ffff33;
+}
+var.referenced1 {
+  color: inherit;
+  background-color: #ff87a2;
+  box-shadow: 0 0 0 2px #ff87a2;
+}
+var.referenced2 {
+  color: inherit;
+  background-color: #96e885;
+  box-shadow: 0 0 0 2px #96e885;
+}
+var.referenced3 {
+  color: inherit;
+  background-color: #3eeed2;
+  box-shadow: 0 0 0 2px #3eeed2;
+}
+var.referenced4 {
+  color: inherit;
+  background-color: #eacfb6;
+  box-shadow: 0 0 0 2px #eacfb6;
+}
+var.referenced5 {
+  color: inherit;
+  background-color: #82ddff;
+  box-shadow: 0 0 0 2px #82ddff;
+}
+var.referenced6 {
+  color: inherit;
+  background-color: #ffbcf2;
+  box-shadow: 0 0 0 2px #ffbcf2;
 }
 
 emu-const {
@@ -132,10 +165,12 @@ emu-eqn div:first-child {
 
 emu-note {
   margin: 1em 0;
-  color: #666;
-  border-left: 5px solid #ccc;
   display: flex;
   flex-direction: row;
+  color: inherit;
+  border-left: 5px solid #52e052;
+  background: #e9fbe9;
+  padding: 10px 10px 10px 0;
 }
 
 emu-note > span.note {
@@ -331,16 +366,10 @@ h1.shortname {
 h1.version {
   color: #f60;
   font-size: 1.5em;
-  margin: 0;
 }
 
 h1.title {
-  margin-top: 0;
   color: #f60;
-}
-
-h1.first {
-  margin-top: 0;
 }
 
 h1,
@@ -380,6 +409,16 @@ h5 {
 }
 h6 {
   font-size: 1em;
+}
+
+pre code.hljs {
+  background: transparent;
+}
+
+emu-clause[id],
+emu-annex[id],
+emu-intro[id] {
+  scroll-margin-top: 2ex;
 }
 
 emu-intro h1,
@@ -526,6 +565,12 @@ emu-annex emu-annex emu-annex emu-annex emu-annex emu-annex {
   margin-top: 1.8em;
 }
 
+#spec-container > emu-intro:first-of-type,
+#spec-container > emu-clause:first-of-type,
+#spec-container > emu-annex:first-of-type {
+  margin-top: 0;
+}
+
 /* Figures and tables */
 figure {
   display: block;
@@ -566,6 +611,10 @@ emu-table th,
 emu-table thead td,
 table.real-table th {
   background-color: #eeeeee;
+}
+
+emu-table td {
+  background: #fff;
 }
 
 /* Note: the left content edges of table.lightweight-table >tbody >tr >td
@@ -1110,18 +1159,19 @@ li.menu-search-result-term:before {
   }
 }
 
-[normative-optional] {
+[normative-optional],
+[legacy] {
   border-left: 5px solid #ff6600;
   padding: 0.5em;
   display: block;
   background: #ffeedd;
 }
 
-.normative-optional-tag {
+.clause-attributes-tag {
   text-transform: uppercase;
   color: #884400;
 }
 
-.normative-optional-tag a {
+.clause-attributes-tag a {
   color: #884400;
 }
